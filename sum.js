@@ -28,12 +28,12 @@ function sum(element) {
     var row = Number(element.slice(6))-1;
     var coll = element.slice(5,6);
     var col = coll.charCodeAt()-65;
-    table[col][row] = elmnt.value;
+    table[col][row] = elmnt.value;//Set selected cell's table value to it's element value.
 
-    total = 0;
+    total = 0;//Reset the total value.
 
     for(var cell = 0; cell < table[col].length; cell++) {
-        total += Number(table[col][cell]);
+        total += Number(table[col][cell]);//Sum all of the cells in the selected collumn.
     }
-    document.getElementById('cell_total'+coll).innerText = total;
+    document.getElementById('cell_total'+coll).innerText = total;//Show the total value in the HTML.
 }
